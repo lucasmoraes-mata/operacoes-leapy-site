@@ -722,9 +722,9 @@
       <span class="legend-item" style="margin-left:auto;color:var(--ink-3)">Passe o mouse nas etapas para ver detalhes</span>
     </div>
 
-    <!-- Linha principal — Atração/Seleção/Admissão -->
+    <!-- BLOCO 1 — Abertura de vagas -->
     <div class="flow-section">
-      <div class="flow-section-title">Atração, Seleção e Admissão</div>
+      <div class="flow-section-title">① Abertura de vagas · responsável: CS</div>
       <div class="flow-row">
 
         <div class="step green"
@@ -732,47 +732,65 @@
              data-tip="Início da relação comercial. Empresa assina contrato com a Leapy e passa a ser cliente."
              data-tip-tag="Marco inicial">
           <div class="step-status"></div>
-          <div class="step-title">Empresa fecha contrato</div>
-          <div class="step-subtitle">Início da relação</div>
+          <div class="step-title">Contrato fechado</div>
+          <div class="step-subtitle">Empresa vira cliente</div>
         </div>
 
         <div class="arrow">→</div>
 
         <div class="step amber"
              data-tip-title="1º Onboarding (CS)"
-             data-tip="Time de CS conduz o primeiro onboarding com a empresa após assinatura. Inclui alinhamento de escopo, expectativas, modelos contratuais e cadência."
-             data-tip-tag="Sem doc dedicada ainda">
+             data-tip="Time de CS conduz o primeiro onboarding com a empresa após assinatura. Alinha escopo, expectativas, modelos contratuais e cadência."
+             data-tip-tag="CS · sem doc dedicada">
           <div class="step-status"></div>
           <div class="step-title">1º Onboarding</div>
-          <div class="step-subtitle">Conduzido por CS</div>
+          <div class="step-subtitle">CS · pendente documentar</div>
           <span class="step-link muted">Pendente documentar</span>
         </div>
 
         <div class="arrow">→</div>
 
         <div class="step amber"
-             data-tip-title="Empresa abre vagas"
-             data-tip="Empresa cadastra a vaga no backoffice da Leapy, definindo critérios, perfil esperado e quantidade."
-             data-tip-tag="Operação cliente">
+             data-tip-title="Abertura de vagas (CS coleta 4 inputs da empresa)"
+             data-tip="Empresa indica os 4 inputs obrigatórios: (1) dia de entrada previsto, (2) entidade vinculada, (3) caminho — Leapy faz processo seletivo ou empresa faz processo interno, (4) precisa indicação de perfis pela Leapy ou empresa traz o jovem. Processo vive no CRM, sem doc Notion dedicada."
+             data-tip-tag="★ CS · vive no CRM">
           <div class="step-status"></div>
-          <div class="step-title">Empresa abre vagas</div>
-          <div class="step-subtitle">Backoffice Leapy</div>
-          <a href="https://www.notion.so/leapyedtech/14e909aefee18013937ce6faeb9d50df" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
+          <div class="step-star">★</div>
+          <div class="step-title">Abertura de vagas</div>
+          <div class="step-subtitle">4 inputs da empresa</div>
+          <span class="step-link muted">CRM (sem Notion)</span>
         </div>
 
         <div class="arrow">→</div>
 
         <div class="decision">
-          Empresa já tem<br>o jovem?
-          <div class="decision-options">SIM → operação · NÃO → Leapy busca</div>
+          Caminho?
+          <div class="decision-options">A → empresa traz · B → Leapy busca</div>
         </div>
 
-        <div class="arrow">→</div>
+      </div>
+
+      <div class="notes-grid" style="margin-top:8px">
+        <div class="note yellow">
+          <div class="note-title">📌 Caminho A · empresa traz o jovem</div>
+          Quando a empresa traz o jovem, pula todo o Bloco 2 (Sourcing & Seleção) e vai direto para a Admissão (Bloco 3). Empresa coleta dados, preenche a planilha padrão e segue o fluxo.
+        </div>
+        <div class="note yellow">
+          <div class="note-title">📌 Caminho B · Leapy busca</div>
+          Quando a empresa pede indicação de perfis, segue para o Bloco 2 — Sourcing & Seleção.
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCO 2 — Sourcing & Seleção -->
+    <div class="flow-section">
+      <div class="flow-section-title">② Sourcing & Seleção · responsável: Mariana Jales · só no caminho B</div>
+      <div class="flow-row">
 
         <div class="step green"
              data-tip-title="Leapy Hub"
-             data-tip="Para vagas em que a empresa precisa do perfil da Leapy. Atração ativa de candidatos no banco de talentos e captação externa. Na inscrição do hub é aplicado o teste de perfil (não é na dinâmica)."
-             data-tip-tag="★ Etapa crítica · inclui teste de perfil">
+             data-tip="Atração ativa de candidatos no banco de talentos e captação externa. Na inscrição do hub é aplicado o teste de perfil (não é na dinâmica)."
+             data-tip-tag="★ Mari Jales · inclui teste de perfil">
           <div class="step-status"></div>
           <div class="step-star">★</div>
           <div class="step-title">Leapy Hub</div>
@@ -783,25 +801,25 @@
 
         <div class="arrow">→</div>
 
-        <div class="step green"
-             data-tip-title="Validação de interesse"
-             data-tip="Contato com candidatos da pré-lista para confirmar interesse na vaga, disponibilidade e fit inicial. Gera uma lista filtrada."
-             data-tip-tag="Hiring · pré-lista">
+        <div class="step amber"
+             data-tip-title="Validação de interesse (quando aplicável)"
+             data-tip="Contato com candidatos da pré-lista para confirmar interesse, disponibilidade e fit. ⚠ Se o jovem já se inscreveu com interesse específico numa vaga, esta etapa é PULADA — vai direto para shortlist."
+             data-tip-tag="Mari Jales · pode pular">
           <div class="step-status"></div>
           <div class="step-title">Validação de interesse</div>
-          <div class="step-subtitle">Pré-lista de candidatos</div>
+          <div class="step-subtitle">Pula se candidato já se interessou</div>
           <a href="https://www.notion.so/leapyedtech/14e909aefee1801d80fec0c021b0f733" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
         </div>
 
         <div class="arrow">→</div>
 
         <div class="step amber"
-             data-tip-title="Seleção (dinâmica em grupo) — quando aplicável"
-             data-tip="Dinâmica em grupo conduzida pelo time. Avaliação de soft skills e fit cultural. ⚠ Nem toda empresa precisa de dinâmica — a maioria passa apenas por validação de interesse (e algumas vão direto após a shortlist). O teste de perfil NÃO é aplicado aqui — ele acontece na inscrição do hub."
-             data-tip-tag="Quando aplicável">
+             data-tip-title="Seleção (dinâmica em grupo) — opcional"
+             data-tip="Dinâmica em grupo conduzida pelo time. Avaliação de soft skills e fit cultural. ⚠ Nem toda empresa precisa de dinâmica — a maioria passa apenas por validação de interesse e algumas vão direto após shortlist. O teste de perfil acontece na inscrição do hub, NÃO aqui."
+             data-tip-tag="Mari Jales · quando aplicável">
           <div class="step-status"></div>
-          <div class="step-title">Seleção</div>
-          <div class="step-subtitle">Dinâmica (quando aplicável)</div>
+          <div class="step-title">Seleção (dinâmica)</div>
+          <div class="step-subtitle">Só quando empresa pede</div>
           <span class="step-link muted">Sem doc dedicada</span>
         </div>
 
@@ -809,56 +827,76 @@
 
         <div class="step green"
              data-tip-title="Envio de shortlist"
-             data-tip="Time consolida a shortlist final e envia para a empresa. Inclui análise de perfis, sinalização de quantidade e handoff para CS."
-             data-tip-tag="★ Etapa crítica">
+             data-tip="Time consolida a shortlist final e envia para a empresa. SLA: 7 dias úteis para montar. Máximo de 3 shortlists por vaga."
+             data-tip-tag="★ Mari Jales · SLA 7 dias · máx 3">
           <div class="step-status"></div>
           <div class="step-star">★</div>
           <div class="step-title">Envio shortlist</div>
-          <div class="step-subtitle">Para a empresa</div>
+          <div class="step-subtitle">SLA 7 dias · máx 3 shortlists</div>
           <a href="https://www.notion.so/leapyedtech/14a909aefee18095b6dbf253dc725073" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
         </div>
 
+        <div class="arrow">→</div>
+
+        <div class="decision" style="min-width:200px;max-width:220px">
+          Empresa aceita<br>a shortlist?
+          <div class="decision-options">SIM → Admissão · NÃO → loop ao Hub</div>
+        </div>
+
+      </div>
+
+      <div class="notes-grid" style="margin-top:8px">
+        <div class="note pink">
+          <div class="note-title">🔁 Loop empresa não aceita</div>
+          Se a empresa rejeita a shortlist, o time volta ao Leapy Hub para buscar novos perfis. Pode acontecer até 3x (máx 3 shortlists por vaga).
+        </div>
       </div>
     </div>
 
-    <!-- Decisão empresa aceita + loop -->
+    <!-- BLOCO 3 — Admissão -->
     <div class="flow-section">
-      <div class="flow-section-title">Decisão da empresa</div>
+      <div class="flow-section-title">③ Admissão · responsáveis: Empresa + Financeiro (Juliana Fragoso) + Ops (Mariana Jales)</div>
       <div class="flow-row">
-        <div class="decision" style="min-width:240px;max-width:260px">
-          Empresa aceita<br>a shortlist?
-          <div class="decision-options">SIM → coleta dados · NÃO → loop volta ao Hub</div>
+
+        <div class="step amber"
+             data-tip-title="Empresa preenche planilha padrão Leapy"
+             data-tip="A empresa coleta os dados do jovem (RG, CPF, documentos) e preenche a planilha padrão da Leapy. Importante: a empresa NÃO envia dados direto — preenche o template padronizado, e a Leapy acessa a planilha para o que precisa."
+             data-tip-tag="Empresa · planilha padronizada">
+          <div class="step-status"></div>
+          <div class="step-title">Planilha padrão</div>
+          <div class="step-subtitle">Empresa preenche template</div>
+          <span class="step-link muted">Template Leapy</span>
         </div>
 
         <div class="arrow">→</div>
 
-        <div class="step amber"
-             data-tip-title="Coleta de dados — empresa"
-             data-tip="A empresa coleta os documentos pessoais e dados do jovem para admissão (RG, CPF, comprovantes, histórico)."
-             data-tip-tag="Sem doc dedicada">
+        <div class="step green"
+             data-tip-title="Financeiro elabora contrato"
+             data-tip="Juliana Fragoso (Financeiro) acessa a planilha padronizada e elabora o contrato do jovem aprendiz com base nos dados informados pela empresa."
+             data-tip-tag="Financeiro · Juliana Fragoso">
           <div class="step-status"></div>
-          <div class="step-title">Coleta de dados</div>
-          <div class="step-subtitle">Empresa coleta do jovem</div>
-          <span class="step-link muted">Sem doc</span>
+          <div class="step-title">Contrato elaborado</div>
+          <div class="step-subtitle">Juliana Fragoso (Fin)</div>
+          <a href="https://www.notion.so/leapyedtech/14a909aefee180ef8124cdb5985ebf6e" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
         </div>
 
         <div class="arrow">→</div>
 
-        <div class="step amber"
-             data-tip-title="Envio dos dados para Leapy"
-             data-tip="Empresa envia os dados coletados de volta para a Leapy para fechamento do processo."
-             data-tip-tag="Sem doc dedicada">
+        <div class="step green"
+             data-tip-title="Ops prepara importação"
+             data-tip="Mariana Jales (Ops) acessa a planilha padronizada para preparar a importação no backoffice (entra no Bloco 4 — Setup técnico)."
+             data-tip-tag="Ops · Mariana Jales">
           <div class="step-status"></div>
-          <div class="step-title">Envio para Leapy</div>
-          <div class="step-subtitle">Empresa → Leapy</div>
-          <span class="step-link muted">Sem doc</span>
+          <div class="step-title">Ops prepara importação</div>
+          <div class="step-subtitle">Mariana Jales (Ops)</div>
+          <span class="step-link muted">Handoff p/ Setup técnico</span>
         </div>
 
         <div class="arrow">→</div>
 
         <div class="step green"
              data-tip-title="Assinatura do contrato"
-             data-tip="Formalização do contrato do jovem aprendiz via ClickSign. Definição de modalidade (direta ou assistida)."
+             data-tip="Formalização do contrato do jovem aprendiz via ClickSign. Modalidade direta ou assistida. Marco final da Admissão."
              data-tip-tag="Marco final da admissão">
           <div class="step-status"></div>
           <div class="step-title">Assinatura contrato</div>
@@ -866,102 +904,82 @@
           <a href="https://www.notion.so/leapyedtech/14a909aefee180ef8124cdb5985ebf6e" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
         </div>
       </div>
-
-      <div class="notes-grid" style="margin-top:8px">
-        <div class="note pink">
-          <div class="note-title">🔁 Loop empresa não aceita</div>
-          Se a empresa rejeita a shortlist, o time volta ao Leapy Hub para buscar novos perfis. Pode acontecer múltiplas vezes até encontrar match.
-        </div>
-      </div>
     </div>
 
-    <!-- Linha paralela — operação -->
+    <!-- BLOCO 4 — Setup técnico de turma -->
     <div class="flow-section">
-      <div class="flow-section-title">Em paralelo · Preparação da turma (dispara quando a vaga é aberta)</div>
+      <div class="flow-section-title">④ Setup técnico de turma · responsável: Tech (em paralelo, depois da admissão)</div>
       <div class="flow-row">
 
-        <div class="step red"
+        <div class="step amber"
              data-tip-title="Ensalamento"
-             data-tip="Definição de qual PL (Program Lead) vai conduzir a turma e alocação dos jovens. Inclui critérios de divisão."
-             data-tip-tag="★ Etapa crítica">
+             data-tip="Definição de qual PL vai conduzir a turma e alocação dos jovens. Hoje feito via planilha de capacity. Em breve teremos um simulador automatizado. ⚠ Notion legado desatualizado."
+             data-tip-tag="★ Tech · simulador a caminho">
           <div class="step-status"></div>
           <div class="step-star">★</div>
           <div class="step-title">Ensalamento</div>
-          <div class="step-subtitle">Define PL + alocação</div>
-          <a href="https://www.notion.so/leapyedtech/1f3909aefee18087bd2dce6420d07b4d" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
-        </div>
-
-        <div class="arrow">→</div>
-
-        <div class="step green"
-             data-tip-title="Cohort · Turma · Calendário"
-             data-tip="Cria no backoffice: o cohort (grupo com mesma data início/fim), a turma (com PL, Zoom, WhatsApp, dia de curso) e o calendário."
-             data-tip-tag="Backoffice · setup">
-          <div class="step-status"></div>
-          <div class="step-title">Cohort · Turma · Calendário</div>
-          <div class="step-subtitle">Setup no backoffice</div>
-          <a href="https://www.notion.so/leapyedtech/1fa909aefee180118e5fee30818f6491" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
-        </div>
-
-        <div class="arrow">→</div>
-
-        <div class="step red"
-             data-tip-title="Criação do cronograma"
-             data-tip="Definição da ordem dos módulos e datas-chave da formação. Hoje feito via planilha base. Futuro: automação."
-             data-tip-tag="★ Etapa crítica">
-          <div class="step-status"></div>
-          <div class="step-star">★</div>
-          <div class="step-title">Cronograma</div>
-          <div class="step-subtitle">Módulos + datas</div>
-          <a href="https://www.notion.so/leapyedtech/1fa909aefee180118e5fee30818f6491" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
+          <div class="step-subtitle">PL + alocação (simulador a caminho)</div>
+          <a href="https://www.notion.so/leapyedtech/1f3909aefee18087bd2dce6420d07b4d" target="_blank" rel="noopener" class="step-link">Notion (legado)</a>
         </div>
 
         <div class="arrow">→</div>
 
         <div class="step amber"
-             data-tip-title="Entidade · Empresa · Liderança"
-             data-tip="Cadastro de entidade, empresa (CNPJ correto!) e lideranças no backoffice. Só executa se não existirem na base. Crítico para evitar vazamento de dados."
-             data-tip-tag="Backoffice · condicional">
+             data-tip-title="Cronograma da turma"
+             data-tip="Após ensalamento, monta-se a planilha de cronograma com IDs dos módulos e datas de início/fim. Esta planilha alimenta a importação no Backoffice V2."
+             data-tip-tag="Tech · planilha base">
           <div class="step-status"></div>
-          <div class="step-title">Entidade · Empresa · Liderança</div>
-          <div class="step-subtitle">Cria se não existe</div>
-          <a href="https://www.notion.so/leapyedtech/1fa909aefee180118e5fee30818f6491" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
+          <div class="step-title">Cronograma</div>
+          <div class="step-subtitle">IDs + datas dos módulos</div>
+          <span class="step-link muted">Planilha base</span>
         </div>
 
         <div class="arrow">→</div>
 
-        <div class="step red"
-             data-tip-title="Importação dos jovens no backoffice"
-             data-tip="Etapa mais crítica do macrossistema. É daqui que nasce toda a origem de dados do jovem na plataforma. Envolve unificação de bases, limpeza, padronização e preenchimento correto de campos como turma, entidade e empresa."
-             data-tip-tag="★ Mais crítica do fluxo">
+        <div class="step green"
+             data-tip-title="Backoffice V2 — Importação em 8 etapas"
+             data-tip="Fluxo guiado dentro do Backoffice V2 → Cohorts. Cria a turma, importa cronograma e planilha de aprendizes. Etapas 4-6 (entidade/account/empresa) são opcionais. Etapa final mostra resumo para checagem antes de concluir."
+             data-tip-tag="★ Tech · 8 etapas guiadas">
           <div class="step-status"></div>
           <div class="step-star">★</div>
-          <div class="step-title">Importação jovens</div>
-          <div class="step-subtitle">Origem dos dados ★</div>
-          <a href="https://www.notion.so/leapyedtech/1fa909aefee180118e5fee30818f6491" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
+          <div class="step-title">Backoffice V2</div>
+          <div class="step-subtitle">Importação em 8 etapas</div>
+          <a href="https://www.notion.so/leapyedtech/36c909aefee1810bb02ae4b636bc0ac8" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step amber"
+             data-tip-title="Calendarização"
+             data-tip="De-para entre conteúdo técnico administrativo articulado, técnico de RH articulado e conteúdos Leapy. A partir desse de-para, puxamos as datas de aulas da turma e colocamos datas para cada conteúdo a ser visto. Resultado: cronograma final da turma."
+             data-tip-tag="Tech · planilha Drive">
+          <div class="step-status"></div>
+          <div class="step-title">Calendarização</div>
+          <div class="step-subtitle">De-para de conteúdos</div>
+          <a href="https://docs.google.com/spreadsheets/d/1gvJjFNq78okxvqYl65NZ0Q2dLEZNaa6PUnc65sRDo6g/edit" target="_blank" rel="noopener" class="step-link">📊 Planilha de alocação →</a>
         </div>
 
         <div class="arrow">→</div>
 
         <div class="step amber"
              data-tip-title="Envio info LeapyGo"
-             data-tip="Encaminhamento da documentação dos jovens para a LeapyGo (Kethleen), cronograma e calendário. Também cadastro no sistema da prefeitura para ensino técnico."
+             data-tip="Encaminhamento da documentação dos jovens, cronograma e calendário para a LeapyGo (Kethleen). Também cadastro no sistema da prefeitura para ensino técnico."
              data-tip-tag="Handoff externo">
           <div class="step-status"></div>
           <div class="step-title">Envio info LeapyGo</div>
-          <div class="step-subtitle">Doc + cronograma</div>
+          <div class="step-subtitle">Kethleen + prefeitura</div>
           <a href="https://www.notion.so/leapyedtech/31e909aefee180389783cf880626f976" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
         </div>
       </div>
 
       <div class="notes-grid">
         <div class="note yellow">
-          <div class="note-title">📌 Calendarização das turmas</div>
-          Independente da abertura de vagas — tema de Capacity. Planeja a previsão de turmas para não criar gargalo.
+          <div class="note-title">📌 Capacity de turmas</div>
+          A planilha de calendarização funciona também como planejamento mensal de capacidade — sala, dia da semana, PL responsável, ocupação. Garante que não se cria gargalo.
         </div>
-        <div class="note yellow">
-          <div class="note-title">📌 Sistema prefeitura</div>
-          Cadastro de jovens para ensino técnico, cronograma e calendário — handoff via LeapyGo.
+        <div class="note pink">
+          <div class="note-title">⚠ Em transição</div>
+          O processo do Backoffice V2 está em fase de aprendizagem e ajustes. O Notion antigo de "cadastrar turmas e empresas" está desatualizado — a referência agora é o guia das 8 etapas.
         </div>
       </div>
     </div>
@@ -1052,13 +1070,14 @@
           <a href="https://www.notion.so/leapyedtech/311909aefee18045b0e2c67fc2458633" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
         </div>
 
-        <div class="step amber"
-             data-tip-title="Plano de recuperação"
-             data-tip="Hoje é reativo: empresa procura CS para que Ops inicie um plano. Não é proativo via análise de termômetro — gap a evoluir."
-             data-tip-tag="Quando necessário · reativo hoje">
+        <div class="step green"
+             data-tip-title="Plano de recuperação · 5 camadas"
+             data-tip="Estrutura nova em 5 camadas funcionais. (0) Detecção via 3 vias: empresa pede · pulso vermelho · sinais leading do Painel A. (1) Triagem em 4 trilhas: light · padrão · intensivo · direto p/ desligamento. (2) Execução com rituais semanais e compromisso formal do jovem. (3) Avaliação em 4 resultados oficiais. (4) Pós-plano com acompanhamento de 4-8 semanas. (5) Aprendizado sistêmico mensal. Mantém templates e roteiros existentes."
+             data-tip-tag="★ Jovens em risco · 5 camadas">
           <div class="step-status"></div>
+          <div class="step-star">★</div>
           <div class="step-title">Plano de recuperação</div>
-          <div class="step-subtitle">Jovens em risco</div>
+          <div class="step-subtitle">5 camadas · light/padrão/intensivo</div>
           <a href="https://www.notion.so/leapyedtech/14a909aefee1802f9f40f0eaf2b9b0d6" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
         </div>
 
