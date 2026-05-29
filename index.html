@@ -281,6 +281,17 @@
   .step.red .step-status { background: var(--red); }
   .step.gap { border-top: 3px dashed var(--ink-3); opacity: 0.85; }
   .step.gap .step-status { background: var(--ink-3); opacity: 0.5; }
+  .step.suggestion { border-top: 3px dashed #7c3aed; background: #faf5ff; }
+  .step.suggestion .step-status { background: #7c3aed; }
+  .step.suggestion::before {
+    content: "💡 Sugestão · não existe ainda";
+    position: absolute;
+    top: -10px; right: 10px;
+    background: #7c3aed; color: white;
+    font-size: 10px; font-weight: 700;
+    padding: 2px 8px; border-radius: 10px;
+    letter-spacing: 0.03em;
+  }
 
   .step-star {
     position: absolute;
@@ -622,7 +633,7 @@
   <section class="intro-view" id="home">
     <div class="intro">
       <h2>Como a Leapy opera, de ponta a ponta.</h2>
-      <p>Quatro macrossistemas conectados que sustentam a jornada do jovem aprendiz — do primeiro contato com a empresa até a efetivação. Clique em cada um para abrir o fluxo detalhado e acessar a documentação no Notion.</p>
+      <p>Cinco macrossistemas conectados que sustentam a jornada do jovem aprendiz — do primeiro contato com a empresa até a efetivação. Quatro deles são a visão operacional (Hiring, Learning Ops, Ecossistema, Suporte). O quinto é a <strong>visão do jovem</strong> ao longo dos 15 meses. Clique em cada um para abrir o fluxo detalhado.</p>
     </div>
 
     <div class="legend">
@@ -679,6 +690,18 @@
           <div class="macro-stat-item"><strong>3</strong> <span>níveis</span></div>
           <div class="macro-stat-item"><strong>SLAs</strong> <span>por nível</span></div>
           <div class="macro-stat-item"><strong>6</strong> <span>públicos</span></div>
+        </div>
+        <div class="macro-card-cta">Abrir fluxo detalhado</div>
+      </button>
+
+      <button class="macro-card" data-flow="jornada" onclick="showFlow('jornada')">
+        <div class="macro-card-num">⑤ MACROSSISTEMA</div>
+        <h3>Jornada do Jovem</h3>
+        <p>Visão do jovem ao longo dos 15 meses de programa Leapy Go. Os marcos que ele vive — da imersão à formatura — e como conectam com o calendário curricular.</p>
+        <div class="macro-card-stats">
+          <div class="macro-stat-item"><strong>6</strong> <span>fases</span></div>
+          <div class="macro-stat-item"><strong>15</strong> <span>meses</span></div>
+          <div class="macro-stat-item"><strong>7</strong> <span>💡 sugestões</span></div>
         </div>
         <div class="macro-card-cta">Abrir fluxo detalhado</div>
       </button>
@@ -2227,6 +2250,470 @@
     </div>
   </section>
 
+  <!-- ═══════════════════ FLUXO 5 — JORNADA DO JOVEM ═══════════════════ -->
+  <section class="detail-view" id="flow-jornada">
+    <div class="detail-header">
+      <div class="detail-header-text">
+        <h2>⑤ Jornada do Jovem</h2>
+        <p>Esta é a <strong>visão do jovem</strong>, não a administrativa. São os marcos que ele vive ao longo dos 15 meses do programa Leapy Go — da imersão de entrada à formatura — e como esses marcos se conectam com o calendário curricular técnico-socioemocional. Cards marcados com 💡 são sugestões que ainda não existem na operação atual.</p>
+        <p style="margin-top:8px;font-size:11px;color:var(--ink-3);font-weight:600;letter-spacing:0.05em;text-transform:uppercase">Última atualização: 29 mai 2026 · escopo: Leapy Go (15 meses)</p>
+      </div>
+      <a href="https://docs.google.com/spreadsheets/d/1bAFPz1epvgyfg5DLidEVaBxEpfpuUJVVWwkWJ4Urzi8/edit?gid=1492805313#gid=1492805313" target="_blank" rel="noopener" class="detail-header-link">
+        📅 Abrir Calendário Curricular
+      </a>
+    </div>
+
+    <div class="legend">
+      <span class="legend-title">Status:</span>
+      <span class="legend-item"><span class="dot dot-green"></span> Acontece hoje</span>
+      <span class="legend-item"><span class="dot dot-amber"></span> Existe mas com gap</span>
+      <span class="legend-item"><span class="star-icon">★</span> Marco crítico</span>
+      <span class="legend-item" style="color:#7c3aed;font-weight:600">💡 Sugestão · não existe ainda</span>
+    </div>
+
+    <!-- FASE 1 -->
+    <div class="flow-section">
+      <div class="flow-section-title">Fase 1 · Boas-vindas — primeiros 7 dias (mês 0)</div>
+      <div class="flow-row">
+
+        <div class="step suggestion"
+             data-tip-title="Welcome Kit Comunidade Leapy"
+             data-tip="Material físico ou digital enviado logo após a offer para celebrar a contratação e fazer o jovem se sentir parte de uma comunidade. Mencionado no Conteúdo Learning como ritual de chegada."
+             data-tip-tag="💡 Sugestão">
+          <div class="step-status"></div>
+          <div class="step-title">Welcome Kit Leapy</div>
+          <div class="step-subtitle">Boas-vindas à comunidade</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Imersão Online (7 dias)"
+             data-tip="Primeira semana do jovem no programa. Pré-imersão (grupo WhatsApp, boas-vindas), durante (aula ao vivo via Zoom, coleta documentação, forms da van, CSAT diário, NPS) e pós (cálculo NPS, registro presenças)."
+             data-tip-tag="★ Entrada formal">
+          <div class="step-status"></div>
+          <div class="step-star">★</div>
+          <div class="step-title">Imersão Online</div>
+          <div class="step-subtitle">7 dias · ritual de entrada</div>
+          <a href="https://docs.google.com/document/d/1-dSbFLOwB-Ct7yeqr4YJNyVMNLxFqKAy/edit" target="_blank" rel="noopener" class="step-link">📘 Guia do Tutor →</a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step amber"
+             data-tip-title="Conexão inicial com a empresa cliente"
+             data-tip="O jovem conhece formalmente a empresa onde vai trabalhar. Hoje varia muito entre empresas — algumas fazem ritual de chegada estruturado, outras não."
+             data-tip-tag="Varia por empresa">
+          <div class="step-status"></div>
+          <div class="step-title">Conexão com a empresa</div>
+          <div class="step-subtitle">Apresentação ao RH e líder</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step suggestion"
+             data-tip-title="Ritual de chegada na empresa cliente"
+             data-tip="Welcome kit corporativo da empresa, buddy interno designado, primeiro 1:1 estruturado com a liderança. A Leapy entrega o jovem 'minimamente funcional', mas o acolhimento depende da empresa — e hoje é desestruturado na maioria dos casos."
+             data-tip-tag="💡 Sugestão">
+          <div class="step-status"></div>
+          <div class="step-title">Welcome kit corporativo</div>
+          <div class="step-subtitle">Ritual de chegada na empresa</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FASE 2 -->
+    <div class="flow-section">
+      <div class="flow-section-title">Fase 2 · Rampagem — mês 1 a 3</div>
+      <div class="flow-row">
+
+        <div class="step green"
+             data-tip-title="Início do ciclo semanal de aula presencial"
+             data-tip="Após a imersão, começa a rotina semanal. 10 etapas que se repetem toda semana, conduzidas pela PL. Coffee, dinâmica, feedback, análise."
+             data-tip-tag="Rotina semanal">
+          <div class="step-status"></div>
+          <div class="step-title">Ciclo semanal começa</div>
+          <div class="step-subtitle">10 etapas se repetem</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Trilha Socioemocional Básica I"
+             data-tip="Autoconhecimento · Aprendendo a aprender · Gestão emocional · Construção de hábitos · Comunicação · Resolução de problemas · Gestão de tempo · Relacionamentos · Protagonismo. Base do desenvolvimento pessoal."
+             data-tip-tag="Trilha curricular">
+          <div class="step-status"></div>
+          <div class="step-title">Trilha Socioemocional</div>
+          <div class="step-subtitle">Autoconhecimento, comunicação, hábitos</div>
+          <a href="https://docs.google.com/spreadsheets/d/10eRGIr8Myy0kBfHNE0X7LBvGF83O2IWzj4MhkPj7EuY/edit" target="_blank" rel="noopener" class="step-link">📚 Ementa →</a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Pulso #1 (~3º mês)"
+             data-tip="Primeira avaliação trimestral. Liderança avalia o jovem nas 9 competências via plataforma · RH responde via WhatsApp · jovem se autoavalia. Ops usa para checkpoint."
+             data-tip-tag="Pulso trimestral">
+          <div class="step-status"></div>
+          <div class="step-title">Pulso #1</div>
+          <div class="step-subtitle">Primeira avaliação 360°</div>
+          <a href="https://www.notion.so/leapyedtech/311909aefee18045b0e2c67fc2458633" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step amber"
+             data-tip-title="Radar de Voo #1"
+             data-tip="Atividade formativa aplicada pela PL — checkpoint pessoal do jovem sobre a jornada até aqui. Mencionado no Escopo PL como atividade da jornada."
+             data-tip-tag="Checkpoint pessoal">
+          <div class="step-status"></div>
+          <div class="step-title">Radar de Voo #1</div>
+          <div class="step-subtitle">Checkpoint pessoal</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FASE 3 -->
+    <div class="flow-section">
+      <div class="flow-section-title">Fase 3 · Consolidação — mês 4 a 6</div>
+      <div class="flow-row">
+
+        <div class="step green"
+             data-tip-title="Trilha Básica II — Ferramentas Digitais e Economia 4.0"
+             data-tip="Office (Word, Excel, PowerPoint) · Pensamento sistêmico · Estatística · Raciocínio analítico · Análise de dados · Métodos Ágeis · Report e visualização · IA · IA Generativa · Automação e No Code. Base técnica para a Economia 4.0."
+             data-tip-tag="Trilha curricular">
+          <div class="step-status"></div>
+          <div class="step-title">Trilha Ferramentas Digitais</div>
+          <div class="step-subtitle">Office, dados, IA, automação</div>
+          <a href="https://docs.google.com/spreadsheets/d/19NoszVb3Ufi-hlaThHT6LSFoMDDTH_8eRfXzAd4w5L8/edit" target="_blank" rel="noopener" class="step-link">📚 Ementa →</a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step amber"
+             data-tip-title="Operação Decolagem"
+             data-tip="Atividade formativa mencionada no Escopo PL. Marco do meio da jornada inicial — consolida o que foi aprendido e prepara o jovem para a especialização."
+             data-tip-tag="Atividade formativa">
+          <div class="step-status"></div>
+          <div class="step-title">Operação Decolagem</div>
+          <div class="step-subtitle">Consolidação do início</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Pulso #2 (~6º mês)"
+             data-tip="Segunda avaliação trimestral. Mesma estrutura do Pulso #1 — liderança, RH e jovem."
+             data-tip-tag="Pulso trimestral">
+          <div class="step-status"></div>
+          <div class="step-title">Pulso #2</div>
+          <div class="step-subtitle">Segunda avaliação 360°</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step amber"
+             data-tip-title="Mentoria Coletiva de Carreira"
+             data-tip="Mencionado no Conteúdo Learning como programa de mentoria coletiva. Encontros em grupo facilitados por mentores externos com experiência de carreira."
+             data-tip-tag="Mentoria de grupo">
+          <div class="step-status"></div>
+          <div class="step-title">Mentoria Coletiva</div>
+          <div class="step-subtitle">Carreira em grupo</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step suggestion"
+             data-tip-title="Mentoria 1:1 com alumni"
+             data-tip="Jovens que já passaram pelo programa conversando 1:1 com quem está vivendo. Cria conexão de identidade (mesma origem, mesmo caminho). Diferente da mentoria coletiva com profissionais externos."
+             data-tip-tag="💡 Sugestão">
+          <div class="step-status"></div>
+          <div class="step-title">Mentoria 1:1 alumni</div>
+          <div class="step-subtitle">Conexão de identidade</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FASE 4 -->
+    <div class="flow-section">
+      <div class="flow-section-title">Fase 4 · Especialização — mês 7 a 9</div>
+      <div class="flow-row">
+
+        <div class="step green"
+             data-tip-title="Trilha Específica (Admin ou RH)"
+             data-tip="Disciplinas específicas da função. Admin: Visão geral da Administração, Fundamentos de Marketing, Finanças Corporativas. RH: Fundamentos de Recursos Humanos. A trilha varia conforme o cargo do jovem."
+             data-tip-tag="Trilha curricular">
+          <div class="step-status"></div>
+          <div class="step-title">Trilha Específica</div>
+          <div class="step-subtitle">Admin ou RH</div>
+          <a href="https://docs.google.com/spreadsheets/d/1Nnf5zJy6a8aT0p4622ij7sSs8nN6nSpKWyW6Me-uzZI/edit" target="_blank" rel="noopener" class="step-link">📚 Ementa Admin →</a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Projeto Empreendedor começa (6 meses antes do fim)"
+             data-tip="Marco crítico. O jovem começa a desenvolver um projeto prático que integra tudo o que aprendeu até aqui. Aplicação real, em grupo. Encerra com banca de apresentação na Fase 5."
+             data-tip-tag="★ Marco crítico">
+          <div class="step-status"></div>
+          <div class="step-star">★</div>
+          <div class="step-title">Projeto Empreendedor</div>
+          <div class="step-subtitle">Começa · 6 meses antes do fim</div>
+          <a href="https://www.notion.so/leapyedtech/361909aefee1802eba85d6ab99b07533" target="_blank" rel="noopener" class="step-link">Orientação no Notion →</a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Pulso #3 (~9º mês)"
+             data-tip="Terceira avaliação trimestral. Foco na evolução técnica e maturidade após primeiros 6 meses."
+             data-tip-tag="Pulso trimestral">
+          <div class="step-status"></div>
+          <div class="step-title">Pulso #3</div>
+          <div class="step-subtitle">Terceira avaliação 360°</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step suggestion"
+             data-tip-title="Halftime check-in"
+             data-tip="Momento explícito de reflexão na metade do programa. 'Estou na metade — onde quero chegar na segunda metade?'. Pode aproveitar o módulo de Planejamento de Carreira da trilha socioemocional."
+             data-tip-tag="💡 Sugestão">
+          <div class="step-status"></div>
+          <div class="step-title">Halftime check-in</div>
+          <div class="step-subtitle">Reflexão da metade</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FASE 5 -->
+    <div class="flow-section">
+      <div class="flow-section-title">Fase 5 · Preparação para Efetivação — mês 10 a 12 (5 meses antes do fim)</div>
+      <div class="flow-row">
+
+        <div class="step green"
+             data-tip-title="Jornada de Efetivação começa"
+             data-tip="Marco crítico. Cinco meses antes do fim do contrato, a Leapy começa a preparar o jovem para a conversa de efetivação com a empresa. Três frentes em paralelo: Dossiê + Treino do Pitch + Insumo para a liderança."
+             data-tip-tag="★ Marco crítico">
+          <div class="step-status"></div>
+          <div class="step-star">★</div>
+          <div class="step-title">Jornada de Efetivação</div>
+          <div class="step-subtitle">Começa · 5 meses antes do fim</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Dossiê do jovem"
+             data-tip="Leapy e jovem montam juntos um resumo da trajetória: o que entregou, o que aprendeu, evolução de competências, projetos. Material apresentado à liderança como insumo para a decisão de efetivação."
+             data-tip-tag="Frente 1 · Dossiê">
+          <div class="step-status"></div>
+          <div class="step-title">Dossiê</div>
+          <div class="step-subtitle">Resumo da trajetória</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Treino do Pitch de Efetivação"
+             data-tip="Estrutura em 7 partes (3-5 min): Quem eu sou · O que eu entrego · O que eu aprendi · Pontos de desenvolvimento · Onde quero crescer · Por que quero ficar · O pedido. Princípios: concreto > genérico, autoconhecimento, fazer o pedido explícito."
+             data-tip-tag="Frente 2 · Pitch">
+          <div class="step-status"></div>
+          <div class="step-title">Treino do Pitch</div>
+          <div class="step-subtitle">7 partes · 3-5 min</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Insumo para a liderança"
+             data-tip="Avaliação de Competências final (9 competências) + observações estruturadas. Material entregue ao RH e à liderança para apoiar a decisão de efetivação."
+             data-tip-tag="Frente 3 · Liderança">
+          <div class="step-status"></div>
+          <div class="step-title">Insumo p/ liderança</div>
+          <div class="step-subtitle">Avaliação de competências</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Pulso #4 (~12º mês)"
+             data-tip="Quarta avaliação trimestral. Alimenta diretamente o Insumo para a liderança e o Pitch de Efetivação. Mesma estrutura dos Pulsos anteriores — liderança, RH e jovem."
+             data-tip-tag="Pulso trimestral · alimenta efetivação">
+          <div class="step-status"></div>
+          <div class="step-title">Pulso #4</div>
+          <div class="step-subtitle">Insumo p/ efetivação</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Banca do Projeto Empreendedor"
+             data-tip="Entrega final do projeto que começou na Fase 4. Apresentação para o time Leapy, lideranças convidadas e turma. Momento de celebração e validação técnica."
+             data-tip-tag="★ Entrega final">
+          <div class="step-status"></div>
+          <div class="step-star">★</div>
+          <div class="step-title">Banca Projeto Empreendedor</div>
+          <div class="step-subtitle">Entrega final</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FASE 6 -->
+    <div class="flow-section">
+      <div class="flow-section-title">Fase 6 · Saída — mês 13 a 15</div>
+      <div class="flow-row">
+
+        <div class="step green"
+             data-tip-title="Pulso #5 (~15º mês · final)"
+             data-tip="Última avaliação trimestral, no fim do contrato. Fecha a série de pulsos e dá o panorama final da evolução do jovem. Insumo de referência para a decisão final da empresa e para o histórico do jovem."
+             data-tip-tag="Pulso final · trimestral">
+          <div class="step-status"></div>
+          <div class="step-title">Pulso #5</div>
+          <div class="step-subtitle">Avaliação final · fim do contrato</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Pitch de Efetivação"
+             data-tip="O jovem apresenta para a liderança o que construiu na Jornada de Efetivação. Direto, com pedido explícito de efetivação. A Leapy treinou — agora é a vez do jovem fazer."
+             data-tip-tag="★ Momento do jovem">
+          <div class="step-status"></div>
+          <div class="step-star">★</div>
+          <div class="step-title">Pitch de Efetivação</div>
+          <div class="step-subtitle">Jovem apresenta à liderança</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step amber"
+             data-tip-title="Decisão da empresa"
+             data-tip="Empresa decide efetivar ou não. Decisão pode acontecer logo após o pitch ou nas semanas seguintes. Em alguns casos, a efetivação acontece depois do fim do contrato — por isso o link de coleta pós-formação."
+             data-tip-tag="Decisão da empresa">
+          <div class="step-status"></div>
+          <div class="step-title">Decisão da empresa</div>
+          <div class="step-subtitle">Efetiva ou não</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step amber"
+             data-tip-title="Encerramento da turma"
+             data-tip="5 etapas operacionais conduzidas pela PL: marca último dia, cerimônia com slides, atualização no BO, certificados, post no Slack da turma."
+             data-tip-tag="Cerimônia + operacional">
+          <div class="step-status"></div>
+          <div class="step-title">Encerramento turma</div>
+          <div class="step-subtitle">5 etapas operacionais</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step green"
+             data-tip-title="Certificado + coleta pós-formação"
+             data-tip="Envio do certificado ao jovem que concluiu a formação. Junto vai um link de coleta para captar efetivações que aconteceram após o encerramento do contrato."
+             data-tip-tag="Marco final formal">
+          <div class="step-status"></div>
+          <div class="step-title">Certificado</div>
+          <div class="step-subtitle">+ coleta pós-formação</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step suggestion"
+             data-tip-title="Formatura da comunidade Leapy"
+             data-tip="Cerimônia de fim da jornada com toda a turma e a comunidade Leapy. Mencionado no Escopo PL e Conteúdo Learning como item a estruturar. Marco simbólico de transição para alumni."
+             data-tip-tag="💡 Sugestão">
+          <div class="step-status"></div>
+          <div class="step-title">Formatura</div>
+          <div class="step-subtitle">Cerimônia da comunidade</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACONTECEM EM PARALELO -->
+    <div class="flow-section">
+      <div class="flow-section-title">Em paralelo · acontecem em qualquer fase (quando necessário)</div>
+      <div class="flow-row">
+
+        <div class="step green"
+             data-tip-title="Plano de Recuperação (5 camadas)"
+             data-tip="Quando sinais de risco aparecem — termômetro baixo, faltas, ΔCSAT negativo, pulso 'Abaixo' — a PL aciona o plano. Estrutura nova em 5 camadas: detecção, triagem em 4 trilhas, execução, avaliação, pós-plano."
+             data-tip-tag="Em qualquer fase">
+          <div class="step-status"></div>
+          <div class="step-title">Plano de Recuperação</div>
+          <div class="step-subtitle">5 camadas</div>
+          <a href="https://www.notion.so/leapyedtech/14a909aefee1802f9f40f0eaf2b9b0d6" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
+        </div>
+
+        <div class="step amber"
+             data-tip-title="Desligamento (se ocorrer)"
+             data-tip="3 cenários: faltas acumuladas (com laudo) · desempenho (com laudo) · iniciativa do jovem (sem laudo). Pode acontecer em qualquer fase, mais comum nas Fases 2-5."
+             data-tip-tag="Excepcional">
+          <div class="step-status"></div>
+          <div class="step-title">Desligamento</div>
+          <div class="step-subtitle">Por empresa ou jovem</div>
+          <a href="https://www.notion.so/leapyedtech/14a909aefee180438a30edb1527a5cef" target="_blank" rel="noopener" class="step-link">Ver no Notion →</a>
+        </div>
+
+        <div class="step green"
+             data-tip-title="Suporte semanal da PL"
+             data-tip="A PL acompanha o jovem semanalmente — em sala de aula, no grupo WhatsApp, em conversas 1:1 quando necessário. Suporte contínuo e referência humana ao longo de toda a jornada."
+             data-tip-tag="Contínuo">
+          <div class="step-status"></div>
+          <div class="step-title">Suporte da PL</div>
+          <div class="step-subtitle">Referência humana</div>
+        </div>
+
+        <div class="step amber"
+             data-tip-title="Encaminhamento psi"
+             data-tip="Quando o jovem traz contexto familiar delicado ou sinais de saúde mental. Psicóloga da Leapy disponível via Airtable. Encaminhamento depende do consentimento do jovem."
+             data-tip-tag="Quando necessário">
+          <div class="step-status"></div>
+          <div class="step-title">Encaminhamento psi</div>
+          <div class="step-subtitle">Saúde mental</div>
+        </div>
+
+        <div class="step suggestion"
+             data-tip-title="Gamificação contínua"
+             data-tip="Sistema de pontos que reforça comportamentos positivos. Jovens acumulam pontos e trocam em clube de benefícios exclusivo (brindes, cupons). Mencionado no Conteúdo Learning como elemento da metodologia, mas a implementação operacional ainda não está estruturada."
+             data-tip-tag="💡 Sugestão">
+          <div class="step-status"></div>
+          <div class="step-title">Gamificação</div>
+          <div class="step-subtitle">Pontos + clube de benefícios</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUGESTÕES ADICIONAIS DESTACADAS -->
+    <div class="notes-grid">
+      <div class="note" style="background:#faf5ff;border:1px solid #e9d5ff">
+        <div class="note-title" style="color:#7c3aed">💡 Marco visual para o próprio jovem</div>
+        Hoje só a operação tem visão da jornada. O jovem navega no escuro. Vale criar uma timeline visual que ele acesse pelo app/portal — onde estou, o que vem, o que já fiz. Existe como sugestão, não como produto.
+      </div>
+      <div class="note" style="background:#faf5ff;border:1px solid #e9d5ff">
+        <div class="note-title" style="color:#7c3aed">💡 Acompanhamento das 9 competências pelo jovem</div>
+        Hoje o dado das 9 competências é da liderança via Pulso. O jovem não vê a própria curva. Vale criar um "radar pessoal" das competências acessível ao jovem — mostra evolução, gaps, próximas habilidades a desenvolver.
+      </div>
+      <div class="note" style="background:#faf5ff;border:1px solid #e9d5ff">
+        <div class="note-title" style="color:#7c3aed">💡 Eventos de turma</div>
+        Encontros além das aulas semanais — presenciais ou virtuais. Pode ser temáticos (carreira, saúde mental), sociais (happy hour, mostra de projeto) ou de conexão entre turmas. Fortalece o pilar "aprendizado é coletivo" da metodologia Leapy.
+      </div>
+      <div class="note" style="background:#faf5ff;border:1px solid #e9d5ff">
+        <div class="note-title" style="color:#7c3aed">💡 Comunidade Alumni</div>
+        Engajamento contínuo de quem já se formou. Mencionado no Escopo PL como gap. Pode virar fonte de mentores 1:1, casos inspiradores, networking. Hoje quem se forma sai e perde contato com a comunidade.
+      </div>
+      <div class="note yellow">
+        <div class="note-title">📌 Contrato sempre 15 meses</div>
+        Esta visão assume contrato padrão Leapy Go de 15 meses. Para Ecossistema, a jornada varia por entidade — visão dedicada virá em fase posterior.
+      </div>
+      <div class="note yellow">
+        <div class="note-title">📌 Conexão com o calendário curricular</div>
+        As trilhas (Socioemocional, Ferramentas Digitais, Específica) aparecem como marcos das fases. Para ver as disciplinas detalhadas, acessar a <a href="https://docs.google.com/spreadsheets/d/1bAFPz1epvgyfg5DLidEVaBxEpfpuUJVVWwkWJ4Urzi8/edit" target="_blank" rel="noopener">planilha de calendarização</a>.
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <!-- Tooltip element -->
@@ -2248,13 +2735,15 @@
     onboarding: document.getElementById('flow-onboarding'),
     formacao: document.getElementById('flow-formacao'),
     ecossistema: document.getElementById('flow-ecossistema'),
-    atendimento: document.getElementById('flow-atendimento')
+    atendimento: document.getElementById('flow-atendimento'),
+    jornada: document.getElementById('flow-jornada')
   };
   const flowTitles = {
     onboarding: 'Hiring',
     formacao: 'Learning Ops',
     ecossistema: 'Ecossistema',
-    atendimento: 'Suporte'
+    atendimento: 'Suporte',
+    jornada: 'Jornada do Jovem'
   };
   const breadcrumb = document.getElementById('breadcrumb');
 
